@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "HappyDaily"
+    }
+  },
+  "defaultProject": "HappyDaily",
+  "cli": {
+    "analytics": "4ff2bcc6-6c20-4e4a-b061-26572ec5cb19"
+  }
 }
