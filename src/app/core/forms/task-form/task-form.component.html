@@ -1,0 +1,52 @@
+<mat-card>
+    <form #myform="ngForm" (ngSubmit)="save(myform)">
+        <mat-card-content>
+            <span class="h3">Save the task!</span>
+            <p class="text-muted">Fill this form and add your task to the report.</p>
+            <br>
+            <div class="container-fluid px-0">
+                <div class="row">
+                    <div class="col-6">
+                        <mat-form-field class="w-100">
+                            <mat-label>
+                                Name
+                            </mat-label>
+                            <input matInput name="name" ngModel required>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-6">
+                        <mat-form-field>
+                            <mat-label>Period</mat-label>
+                            <mat-select name="period" ngModel required>
+                                <mat-option *ngFor="let period of periods" [value]="period">
+                                    {{period}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12">
+                        <mat-form-field class="w-100">
+                            <mat-label>
+                                Description
+                            </mat-label>
+                            <textarea matInput name="description" ngModel required></textarea>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </mat-card-content>
+        <mat-card-footer>
+            <div class="container-fluid mb-3">
+                <div class="row">
+                    <div class="col-6">
+                        <button (click)="resetForm(myform)" mat-stroked-button color="warn" class="btn-block">Clear</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="submit" mat-stroked-button color="primary" class="btn-block">Send to list</button>
+                    </div>
+                </div>
+            </div>
+        </mat-card-footer>
+    </form>
+</mat-card>

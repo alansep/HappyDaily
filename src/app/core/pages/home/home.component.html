@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+
+<br><br>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <app-task-form (onSaveTask)="updateDisplay($event)"></app-task-form>
+        </div>
+        <div class="col-12 col-md-4">
+        </div>
+        <div class="col-12 col-md-4">
+            <app-display [task]=task></app-display>
+        </div>
+    </div>
+</div>
