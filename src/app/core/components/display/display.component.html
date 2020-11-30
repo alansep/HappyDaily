@@ -1,0 +1,14 @@
+<mat-card>
+    <div class="magic-display px-2 overflow-auto">
+        <div *ngIf="tasks.morning.length > 0">
+            <app-task-card *ngFor="let task of tasks.morning" [task]="task"></app-task-card>
+        </div>
+        <div *ngIf="tasks.afternoon.length > 0">
+            <app-task-card *ngFor="let task of tasks.afternoon" [task]="task"></app-task-card>
+        </div>
+        <div *ngIf="tasks.evening.length > 0">
+            <app-task-card *ngFor="let task of tasks.evening" [task]="task"></app-task-card>
+        </div>
+    </div>
+    <button mat-stroked-button color="primary" class="btn-block mt-3" (click)="copyToClipboard()">Copy to clipboard</button>
+</mat-card>
